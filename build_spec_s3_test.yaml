@@ -1,0 +1,7 @@
+--- 
+phases: 
+  build: 
+    commands: 
+      - "cd /go/src/terratest/tests/s3-tests/ && go test -run TestTerraformAwsS3Example "
+
+version: 0.2
