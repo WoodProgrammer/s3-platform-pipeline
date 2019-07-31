@@ -3,7 +3,7 @@ phases:
   build: 
     commands: 
       - "docker build -t s3_dev_test ."
-      - "docker tag k8s_cluster_deployer  $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/s3_bucket_test:latest"
+      - "docker tag s3_dev_test $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/s3_bucket_test:latest"
   post_build: 
     commands: 
       - "docker push $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/s3_bucket_test:latest"
