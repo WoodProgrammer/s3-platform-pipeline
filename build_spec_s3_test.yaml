@@ -3,5 +3,8 @@ phases:
   build: 
     commands: 
       - "cd /go/src/terratest/tests/s3-tests/ && go test -run TestTerraformAwsS3Example "
-
+  pre_build: 
+    commands: 
+      - "$(aws ecr get-login --no-include-email --region eu-central-1)"
+      
 version: 0.2
